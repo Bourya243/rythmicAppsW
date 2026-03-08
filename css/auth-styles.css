@@ -1,0 +1,218 @@
+/* Authentication Modal Styles */
+
+.tm-login-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.tm-login-btn:focus {
+  outline: none;
+}
+
+.tm-auth-modal {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tm-auth-modal-header {
+  background: linear-gradient(135deg, #369 0%, #37A 100%);
+  border: none;
+  padding: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tm-auth-toggle {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tm-auth-toggle-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tm-auth-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tm-auth-toggle-btn.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: white;
+  color: white;
+}
+
+.tm-auth-modal-header .close {
+  color: white;
+  opacity: 0.8;
+  padding: 15px 20px;
+  font-size: 2rem;
+}
+
+.tm-auth-modal-header .close:hover {
+  opacity: 1;
+}
+
+.tm-auth-modal-body {
+  padding: 40px;
+  background-color: #f8f9fa;
+}
+
+.tm-auth-form {
+  display: none;
+}
+
+.tm-auth-form.active {
+  display: block;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tm-form-label {
+  color: #369;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.tm-form-control {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #333;
+}
+
+.tm-form-control:focus {
+  border-color: #369;
+  box-shadow: 0 0 0 0.2rem rgba(51, 102, 153, 0.15);
+  outline: none;
+  background-color: white;
+  color: #333;
+}
+
+.tm-form-control::placeholder {
+  color: #999;
+}
+
+.tm-form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+}
+
+.tm-form-check-input:checked {
+  background-color: #369;
+  border-color: #369;
+}
+
+.tm-form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(51, 102, 153, 0.15);
+  outline: none;
+}
+
+.tm-form-check-label {
+  color: #666;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 8px;
+}
+
+.tm-btn-auth {
+  background-color: #369;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.tm-btn-auth:hover {
+  background-color: #37A;
+  color: white;
+  box-shadow: 0 4px 12px rgba(51, 102, 153, 0.3);
+}
+
+.tm-btn-auth:focus {
+  outline: none;
+  color: white;
+  background-color: #37A;
+}
+
+.tm-forgot-password {
+  color: #369;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tm-forgot-password:hover {
+  color: #37A;
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-check {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tm-auth-modal-body {
+    padding: 25px;
+  }
+
+  .tm-auth-toggle-btn {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .tm-form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .tm-form-label {
+    font-size: 0.9rem;
+  }
+
+  .modal-dialog-centered {
+    max-width: 100%;
+  }
+}
